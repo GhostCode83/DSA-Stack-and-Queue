@@ -36,10 +36,38 @@ class Stack {
     return "Stack is not empty"
   }
 
-  // display() {
+  display() {
+    if (this.top === null) {
+      return "Stack is empty"
+    }
+    let currNode = this.top;
+    let previousNode = this.top;
+    while (currNode !== null) {
+      previousNode = currNode;
+      console.log(currNode)
+      currNode = currNode.next
+    }
+  }
 
-  // }
+  stackValueToString() {
+    if (this.top === null) {
+      return "Stack is empty"
+    }
+    let currNode = this.top;
+    let previousNode = this.top;
+
+    let arr = []
+    while (currNode !== null) {
+      previousNode = currNode;
+      console.log(currNode.data)
+      arr.push(currNode.data)
+      arr.toString();
+      currNode = currNode.next
+    }
+
+  }
 }
+
 
 
 
